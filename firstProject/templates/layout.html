@@ -4,12 +4,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login page</title>
-    <link rel="stylesheet" href="{% static "style.css" %}" />
+    <title>{% block tiltle %} default value {% endblock %}</title>
+    <link rel="stylesheet" href="{%static 'index.css'%}" />
   </head>
   <body>
-    <h1>This is login page.</h1>
-    <a href="/authRoute/signUp">signup</a>
-    <a href="/authRoute/">home</a>
+    <nav>this is our navbar</nav>
+    {% block content%}{% endblock %}
   </body>
 </html>
