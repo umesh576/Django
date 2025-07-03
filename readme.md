@@ -23,3 +23,8 @@ for load the templates from project
 changes this in template section at the setting.py files
 'DIRS': ['templates'],
 and load {% load static%}
+
+for make a layout page means the making of statics follw the structure
+{
+
+}
