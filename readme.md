@@ -18,3 +18,8 @@ and add the 'newApp_Name', at the installed app section for tell the root the ap
 for using static folder where we can store photo css file or javascript file
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+for load the templates from project
+changes this in template section at the setting.py files
+'DIRS': ['templates'],
+and load {% load static%}
