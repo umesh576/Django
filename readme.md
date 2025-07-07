@@ -58,13 +58,29 @@ another way to setup envirnoment
 1. Run this command for set up envirnoment: python -m venv .venv
 2. for active the envirnoment: .venv\Scripts\activate
 3. for install django : pip install django
-4. run this command for check installition django: python -m django --version
-5. run this for start tailwind project: python .\manage.py tailwind init
+4.  for instal tailwindcss: pip install django-tailwind
+5. update this at the installed app at setting.py 
+INSTALLED_APPS = [
+    ...
+    "tailwind",
+    "theme",  # You will create this app below
+]
+6. also update at the setting.py
+TAILWIND_APP_NAME = 'theme'
+INTERNAL_IPS = ["127.0.0.1"]  # Required for Django Debug Toolbar (optional)
+7. aslo update this at the setting.py
+NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
+8. run this command for activate tailwind: python manage.py tailwind init theme
    it can make theme app by default otherwise you can give any specific name
-6. then update installed app by add theme
-7. update setting.py in firstproject can upat eby this
-   {
-   TAILWIND_APP_NAME = 'theme'
-   INTERNAL_IPS = ['127.0.0.1']
-   }
-8. again install tailwind app by this command: python manage.py tailwind install
+9. then run this command: python manage.py tailwind install
+10. at last run this command: python manage.py tailwind start
+11. update ouwm layout.html with refence with theme base.html
+{
+  {% load  tailwind_tags %} at top
+  		{% tailwind_css %} at head
+}
+12. again run this command at the django folder .venv\Scripts\Activate
+13. python .\manage.py tailwind start
+14. python .\manage.py runserver   
+
+for refernces use this website: https://docs.chaicode.com/youtube/chai-aur-django/tailwind/
