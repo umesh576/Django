@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block title%}details of chaiid{% endblock  %}
+{% block content%}
+<h1>Chai details dynamic page</h1>
+<h1>{{chai.name}}</h1>
+<h1>{{chai.description}}</h1>
+
+
+{%endblock%}

@@ -4,5 +4,17 @@ chai page
 {% endblock %}
  {% block content %}
 <h1>ALL chai for you</h1>
+<div class="grid grid-cols-3 gap-4 m-4">
+
+  {% for  chai in chais %}
+  <div class="rounded-lg bg-blue-700 m-3 ">
+    <img  src="{{chai.image.url}}" alt="" class="object-fill">
+    <h1 class="text-2xl font-bold text-black">{{chai.name}}</h1>
+    <div class="flex justify-center">
+
+      <a href="{% url 'chaiDetails' chai.id%}"><button class="mt-5 text-center p-5 bg-white rounded-lg px-9 hover:bg-blue-100 hover:text-2xl shadow shadow-blue-950 ">{{chai.type}}-{{chai.id}}</button></a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
 {% endblock %}
-{% for  chai in chais %}{% endfor %}
