@@ -5,5 +5,5 @@ from .models import chaiModel
 # Create your views here.
 def allChai(request):
     chai = chaiModel.objects.all()
-    return render(request, 'rProject/all_rProject.html',{'chai':chai})
+    return render(request, 'rProject/all_rProject.html',{'chais':chai})
 
