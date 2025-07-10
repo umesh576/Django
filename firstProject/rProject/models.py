@@ -10,7 +10,7 @@ class chaiModel(models.Model):
     name = models.CharField(max_length=100)
     image = models.ImageField(upload_to='chai/')
     date = models.DateTimeField(default=timezone.now)
-    type = models.CharField(max_length=2, choices=CHAI_TYPE_CHOICE)
+    type = models.CharField(max_length=2, choices=CHAI_TYPE_CHOICE,default='ML')
     description = models.TextField(default='')
 
     def __str__(self):
