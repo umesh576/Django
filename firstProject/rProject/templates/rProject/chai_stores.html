@@ -2,4 +2,18 @@
 {% block content %}
 
     text content form
+    <form method="POST" class="bg-white p-4">
+        {% csrf_token %}
+        {{form}}
+        <button type='Submit'>Submit</button>
+    </form>
+    {% if stores %}
+        <h2>Stores avaliable</h2>
+    <ul>
+        {% for store in stores  %} 
+        <li>{{store.name}} - {{store.location}}</li>
+        {% endfor %}  
+    </ul>
+
+    {% endif %}
 {% endblock %}

@@ -22,4 +22,4 @@ def chai_store_view(request):
     else:
         form = chaiVarietyForm() 
 
-    return render(request, 'rProject/chai_stores.html',{'stores':store,'from':form})
+    return render(request, 'rProject/chai_stores.html',{'stores':store,'form':form})
